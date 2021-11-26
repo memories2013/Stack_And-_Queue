@@ -8,7 +8,11 @@ public class QueueTest {
 		newQueue.enqueue(56);
 		newQueue.enqueue(30);
 		newQueue.enqueue(70);
+		newQueue.display();
 		
+		System.out.println();
+		
+		newQueue.dequeue();
 		newQueue.display();
 	}
 	

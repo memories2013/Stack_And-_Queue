@@ -19,6 +19,12 @@ public class Queue {
 		rear = rear.getNext();
 	}
 	
+	public int dequeue() {
+		Node temp = front;
+		front = front.getNext();
+		return temp.getData();
+	}
+	
 	public void display() {
 		Node node = front;
 		
