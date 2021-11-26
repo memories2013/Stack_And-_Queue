@@ -1,16 +1,31 @@
-package Stack;
+package Queue;
 
-public class StackTest {
+import LinkedLists.Node;
 
-	public static void main(String[] args) {
+public class Queue {
+	
+	Node front;
+	Node rear;
+	//List<Integer> linkedList = new LinkedList<Integer>();
+	
+	public void enqueue(int data) {
+		Node toAdd = new Node();
+		toAdd.setData(data);
+		if(front==null) {
+			front = rear = toAdd;
+			return;
+		}
+		rear.setNext(toAdd);
+		rear = rear.getNext();
+	}
+	
+	public void display() {
+		Node node = front;
 		
-		Stacks stack = new Stacks();
-		stack.push(70);
-		stack.push(30);
-		stack.push(56);
-		
-		stack.show();
-
+		while(node != rear.getNext() ) {
+			System.out.println(node.getData());
+			node = node.getNext();
+		}
 	}
 
 }

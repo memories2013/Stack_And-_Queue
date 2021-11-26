@@ -18,7 +18,7 @@ public class Stacks {
 	}
 	
 	
-	// popping and peeking till the stack becomes empty
+	// popping and peeking itill the stack becomes empty
 	public void pop() {
 		if(list.isEmpty()) {
 			System.out.println("The Stack is empty");
